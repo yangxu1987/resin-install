@@ -1,0 +1,9 @@
+ #!/bin/bash
+#É¾³ýrpm°æjdk
+rpm -qa | grep java > /tmp/java.tmp
+rpm -qa | grep jdk >> /tmp/java.tmp
+for f in $(cat /tmp/java.tmp)
+do
+    rpm -e --nodeps $f
+done
+rm -rf /tmp/java.tmp

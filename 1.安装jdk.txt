@@ -1,0 +1,9 @@
+#!/bin/bash
+#jdk-1_5_0_06-linux-i586.bin
+cd /usr/soft
+chmod 755 jdk-1_5_0_06-linux-i586.bin
+./jdk-1_5_0_06-linux-i586.bin
+echo "export  PATH=/usr/soft/jdk1.6.0_45/bin:$PATH">>/etc/profile
+echo "export JAVA_HOME=/usr/soft/jdk1.6.0_45">>/etc/profile
+
+source /etc/profile 

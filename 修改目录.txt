@@ -1,0 +1,7 @@
+#!/bin/bash
+read -p "input : " a
+sed -i "104s/ROOT/$a/g" /usr/local/resin-pro-4.0.49/conf/resin.xml
+echo "modify successful"
+echo "resin restart"
+#÷ÿ∆Ùresin
+/usr/local/resin-pro-4.0.49/bin/resin.sh restart

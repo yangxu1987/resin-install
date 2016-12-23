@@ -1,0 +1,12 @@
+#!/bin/bash
+read -p "Enter before the change
+ port(8080) :" a
+a=${a:-8080}
+read -p "Enter the modified
+ port :" b
+sed -i "73s/$a/$b/g" /usr/local/resin-pro-4.0.49/conf/resin.properties
+sed -i "76s/$a/$b/g" /usr/local/resin-pro-4.0.49/conf/resin.properties
+echo "modify successful"
+echo "resin restart"
+#÷ÿ∆Ùresin
+/usr/local/resin-pro-4.0.49/bin/resin.sh restart

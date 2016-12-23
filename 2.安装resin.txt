@@ -1,0 +1,10 @@
+#!/bin/bash
+cd /usr/local/resin
+wget http://www.caucho.com/download/resin-pro-4.0.49.tar.gz
+tar -zxvf resin-pro-4.0.49.tar.gz
+cd resin-pro-4.0.49
+./configure --with-java-home=/usr/soft/jdk1.6.0_45
+make&&make install
+#Æô¶¯resin
+cd bin
+./resin.sh start
